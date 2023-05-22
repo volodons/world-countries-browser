@@ -47,7 +47,7 @@ main {
 }
 
 .select-input {
-  padding: 1.25rem 2rem;
+  padding: 1.25rem 1.25rem;
   width: 100%;
   box-shadow: 0px 0px 15px -10px #000;
   border-style: none;
