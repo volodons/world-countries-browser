@@ -97,3 +97,27 @@ main {
 .card__description-data {
   font-weight: normal;
 }
+
+@media (max-width: 878px) {
+  .cards-wrapper {
+    justify-content: center;
+  }
+
+  .forms-wrapper {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+}
+
+@media (max-width: 560px) {
+  header {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+}
+
+@media (max-width: 494px) {
+  .header__heading {
+    text-align: center;
+  }
+}
