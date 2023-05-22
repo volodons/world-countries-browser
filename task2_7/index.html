@@ -8,6 +8,45 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <script src="./scripts/script.js" defer></script>
     <title>List Page of Countries</title>
+    <header>
+      <span>Where in the World?</span>
+      <button>
+        <img
+          src="./images/theme-toggle-icon.png"
+          alt="Light/Dark Theme Toggle"
+          title="Light/Dark Theme Toggle"
+        />
+      </button>
+    </header>
+    <main>
+      <label for="searchInput"></label>
+      <input
+        type="text"
+        name="searchByName"
+        placeholder="&#128270; Search for a country..."
+      />
+      <label for="searchByRegion"></label>
+      <select name="searchByRegion">
+        <option disabled hidden selected>Filter By Region</option>
+        <option value="Africa">Africa</option>
+        <option value="America">America</option>
+        <option value="Asia">Asia</option>
+        <option value="Europe">Europe</option>
+        <option value="Oceania">Oceania</option>
+      </select>
+      <section class="card">
+        <img
+          class="card__image"
+          src="https://flagcdn.com/ua.svg"
+          alt="Ukraine"
+          title="Ukraine"
+        />
+        <p class="card__heading">Ukraine</p>
+        <p class="card__description">Population: <span>44134693</span></p>
+        <p class="card__description">Region: <span>Europe</span></p>
+        <p class="card__description">Capital: <span>Kyiv</span></p>
+      </section>
+    </main>
   </head>
   <body></body>
 </html>
