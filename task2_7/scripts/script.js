@@ -1,11 +1,21 @@
 "use strict";
 
+const themeColorButton = document.querySelector(".button");
 const itemsList = document.querySelector(".cards-wrapper");
 const textForm = document.querySelector("#text-form");
 const selectForm = document.querySelector("#select-form");
 
+themeColorButton.addEventListener("click", toggleThemeColor);
 textForm.addEventListener("submit", getCountryName);
 selectForm.addEventListener("input", getRegionName);
+
+function toggleThemeColor() {
+  const body = document.querySelector(".body-wrapper");
+  const header = document.querySelector(".header-wrapper");
+  body.classList.toggle("body-wrapper--dark");
+  header.classList.toggle("header-wrapper--dark");
+  themeColorButton.classList.toggle("button--dark");
+}
 
 function getRegionName(event) {
   const formData = new FormData(event.currentTarget);

@@ -1,13 +1,22 @@
-body {
+.body-wrapper {
   background-color: #fafafa;
 }
 
-header {
+.body-wrapper--dark {
+  background-color: #1f2d36;
+  color: #fff;
+}
+
+.header-wrapper {
   padding: 2rem 6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
+}
+
+.header-wrapper--dark {
+  background-color: #2b3742;
 }
 
 .header__heading {
@@ -18,9 +27,13 @@ header {
 .button {
   all: unset;
   cursor: pointer;
-  background-image: url(../images/theme-toggle-icon.png);
+  background-image: url(../images/theme-toggle-icon-black.png);
   height: 3rem;
   width: 3rem;
+}
+
+.button--dark {
+  background-image: url(../images/theme-toggle-icon-white.png);
 }
 
 .button:hover {
