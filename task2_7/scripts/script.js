@@ -1,4 +1,27 @@
+"use strict";
+
 const itemsList = document.querySelector(".cards-wrapper");
+const textForm = document.querySelector("#text-input");
+const selectForm = document.querySelector("#select-input");
+
+textForm.addEventListener("submit", getCountryName);
+
+function getCountryName(event) {
+  event.preventDefault();
+  const formData = new FormData(event.target);
+  const countryName = formData.get("searchByName");
+  getCountryDataByName(countryName);
+}
+
+function getCountryDataByName(name) {
+  const apiUrl = `https://restcountries.com/v3.1/name/${name}?fields=flags,name,population,region,capital`;
+  fetch(apiUrl)
+    .then((response) => {
+      return response.json();
+    })
+    .then((response) => renderItems(response))
+    .catch((error) => console.log("Error", error));
+}
 
 function getAllCountriesData() {
   const apiUrl =
@@ -12,6 +35,7 @@ function getAllCountriesData() {
 }
 
 function renderItems(items) {
+  itemsList.innerHTML = "";
   for (let i = 0; i < items.length; i++) {
     const item = document.createElement("section");
     item.classList.add("card");
