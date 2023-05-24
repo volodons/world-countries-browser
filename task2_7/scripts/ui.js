@@ -1,3 +1,4 @@
+// Render (re-render) country cards
 function renderItems(items) {
   const itemsList = document.querySelector(".cards-wrapper");
   itemsList.innerHTML = "";
@@ -27,6 +28,7 @@ function renderItems(items) {
   }
 }
 
+// Toggle theme color of page (light/dark)
 function toggleThemeColor() {
   const body = document.querySelector(".body-wrapper");
   const header = document.querySelector(".header-wrapper");
