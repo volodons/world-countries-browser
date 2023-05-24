@@ -123,7 +123,7 @@ main {
   }
 }
 @media (max-width: 560px) {
-  header {
+  .header-wrapper {
     flex-direction: column;
     row-gap: 2rem;
   }
