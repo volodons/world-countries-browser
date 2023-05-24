@@ -15,7 +15,6 @@ function getAllCountriesData() {
     .catch((error) => {
       console.log(error);
       const itemsList = document.querySelector(".cards-wrapper");
-      itemsList.innerHTML = "";
       const errorMessage = document.createElement("strong");
       errorMessage.innerText = "Error: reload your page or try again later";
       itemsList.append(errorMessage);
@@ -59,7 +58,8 @@ function getCountryDataByName(name) {
       const itemsList = document.querySelector(".cards-wrapper");
       itemsList.innerHTML = "";
       const errorMessage = document.createElement("strong");
-      errorMessage.innerText = "Error: reload your page or try again later";
+      errorMessage.innerText =
+        "Error: reload your page or try again later OR this country doesn't exist";
       itemsList.append(errorMessage);
     });
 }

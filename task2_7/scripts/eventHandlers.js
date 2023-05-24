@@ -10,7 +10,9 @@ function getCountryName(event) {
   event.preventDefault();
   const formData = new FormData(event.target);
   const countryName = formData.get("searchByName");
-  getCountryDataByName(countryName);
+  if (!/^\s*$/.test(countryName)) {
+    getCountryDataByName(countryName);
+  }
 }
 
 export { getRegionName, getCountryName };
