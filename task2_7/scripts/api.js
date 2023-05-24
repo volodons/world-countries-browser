@@ -7,7 +7,7 @@ function getAllCountriesData() {
     .then((response) => {
       return response.json();
     })
-    .then((response) => renderItems(response))
+    .then((data) => renderItems(data))
     .catch((error) => console.log("Error:", error));
 }
 
@@ -17,7 +17,7 @@ function getRegionDataByName(name) {
     .then((response) => {
       return response.json();
     })
-    .then((response) => renderItems(response))
+    .then((data) => renderItems(data))
     .catch((error) => console.log("Error", error));
 }
 
@@ -27,7 +27,7 @@ function getCountryDataByName(name) {
     .then((response) => {
       return response.json();
     })
-    .then((response) => renderItems(response))
+    .then((data) => renderItems(data))
     .catch((error) => console.log("Error", error));
 }
 
