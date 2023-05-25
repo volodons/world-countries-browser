@@ -77,10 +77,10 @@ main {
 
 .card {
   width: 320px;
-  height: 424px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: stretch;
   border-radius: 5px;
   box-shadow: 5px 5px 15px -10px #000;
 }

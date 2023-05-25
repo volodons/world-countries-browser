@@ -79,10 +79,10 @@ main {
 
 .card {
   width: $card-width;
-  height: $card-height;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: stretch;
   border-radius: $border-radius;
   box-shadow: $card-box-shadow;
 }
