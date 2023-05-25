@@ -9,7 +9,7 @@ const selectForm = document.querySelector("#select-form");
 
 // Attach event listeners to forms and button
 themeColorButton.addEventListener("click", toggleThemeColor);
-textForm.addEventListener("submit", getCountryName);
+textForm.addEventListener("input", getCountryName);
 selectForm.addEventListener("input", getRegionName);
 
 // Initial call of function to get all countries data from API
