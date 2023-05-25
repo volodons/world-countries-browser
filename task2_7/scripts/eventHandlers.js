@@ -11,14 +11,19 @@ function getRegionName(event) {
   getRegionDataByName(regionName);
 }
 
+let timeoutId;
+
 // Get user's select input
 function getCountryName(event) {
-  const formData = new FormData(event.currentTarget);
-  const countryName = formData.get("searchByName");
-  if (!/^\s*$/.test(countryName)) {
-    getCountryDataByName(countryName);
-  }
-  getAllCountriesData();
+  clearTimeout(timeoutId);
+  timeoutId = setTimeout(() => {
+    const formData = new FormData(event.currentTarget);
+    const countryName = formData.get("searchByName");
+    if (!/^\s*$/.test(countryName)) {
+      getCountryDataByName(countryName);
+    }
+    getAllCountriesData();
+  }, 1000);
 }
 
 export { getRegionName, getCountryName };
