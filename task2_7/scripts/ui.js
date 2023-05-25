@@ -12,7 +12,7 @@ function renderItems(items) {
             alt=${items[i].name.common}
             title=${items[i].name.common}
         />
-        <p class="card__heading">${items[i].name.common}</p>
+        <h2 class="card__heading">${items[i].name.common}</h2>
         <section class="card__description-wrapper">
           <p class="card__description">
             Population: <span class="card__description-data">${items[i].population}</span>
