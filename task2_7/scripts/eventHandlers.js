@@ -10,15 +10,16 @@ import { renderItems } from "./ui.js";
 function getRegionName(event) {
   const formData = new FormData(event.currentTarget);
   const regionName = formData.get("searchByRegion");
-  getRegionDataByName(regionName).then(renderItems);
+  getRegionDataByName(regionName).then((data) => renderItems(data));
 }
 
 // Get user's select input
 function getCountryName(event) {
-  const formData = new FormData(event.currentTarget);
-  const countryName = formData.get("searchByName");
+  const countryName = event.target.value;
+  // const formData = new FormData(event.currentTarget);
+  // const countryName = formData.get("searchByName");
   if (!/^\s*$/.test(countryName)) {
-    getCountryDataByName(countryName);
+    getCountryDataByName(countryName).then((data) => renderItems(data));
   }
   getAllCountriesData();
 }

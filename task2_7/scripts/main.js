@@ -27,4 +27,4 @@ function debounce(func, delay) {
 }
 
 // Initial call of function to get all countries data from API
-getAllCountriesData().then(renderItems(items));
+getAllCountriesData().then((data) => renderItems(data));

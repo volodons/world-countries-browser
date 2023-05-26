@@ -1,5 +1,3 @@
-import { renderItems } from "./ui.js";
-
 // Get all countries data from API
 function getAllCountriesData() {
   const apiUrl =
@@ -11,7 +9,6 @@ function getAllCountriesData() {
       }
       return response.json();
     })
-    .then((data) => renderItems(data))
     .catch((error) => {
       console.error(error);
       const itemsList = document.querySelector(".cards-wrapper");
@@ -31,7 +28,6 @@ function getRegionDataByName(name) {
       }
       return response.json();
     })
-    .then((data) => renderItems(data))
     .catch((error) => {
       console.error(error);
       const itemsList = document.querySelector(".cards-wrapper");
@@ -52,7 +48,6 @@ function getCountryDataByName(name) {
       }
       return response.json();
     })
-    .then((data) => renderItems(data))
     .catch((error) => {
       console.error(error);
       const itemsList = document.querySelector(".cards-wrapper");
