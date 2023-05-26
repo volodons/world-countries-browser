@@ -7,14 +7,8 @@ const themeColorButton = document.querySelector(".button");
 const textForm = document.querySelector("#text-form");
 const selectForm = document.querySelector("#select-form");
 
-const debouncedGetCountryName = debounce(getCountryName, 1000);
-
-// Attach event listeners to forms and button
-themeColorButton.addEventListener("click", toggleThemeColor);
-textForm.addEventListener("input", debouncedGetCountryName);
-selectForm.addEventListener("input", getRegionName);
-
 // Add debounce
+const debouncedGetCountryName = debounce(getCountryName, 300);
 function debounce(func, delay) {
   let timerId;
   return function (...args) {
@@ -25,6 +19,11 @@ function debounce(func, delay) {
     }, delay);
   };
 }
+
+// Attach event listeners to forms and button
+themeColorButton.addEventListener("click", toggleThemeColor);
+textForm.addEventListener("input", debouncedGetCountryName);
+selectForm.addEventListener("input", getRegionName);
 
 // Initial call of function to get all countries data from API
 getAllCountriesData().then((data) => renderItems(data));
